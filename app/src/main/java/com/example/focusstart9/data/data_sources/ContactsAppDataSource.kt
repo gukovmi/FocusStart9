@@ -1,14 +1,14 @@
-package com.example.focusstart9.data
+package com.example.focusstart9.data.data_sources
 
 import android.provider.ContactsContract
 import com.example.focusstart9.App.Companion.appContext
 import com.example.focusstart9.App.Companion.resolver
 import com.example.focusstart9.R
-import com.example.focusstart9.domain.models.Contact
+import com.example.focusstart9.domain.data_models.Contact
 import io.reactivex.Single
+import javax.inject.Inject
 
-class ContactsAppDataSource {
-
+class ContactsAppDataSource @Inject constructor() {
     fun getContacts(): Single<List<Contact>> {
 
         val cursor = resolver.query(

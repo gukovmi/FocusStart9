@@ -1,4 +1,4 @@
-package com.example.focusstart9.list.presentation
+package com.example.focusstart9.presentation.views
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -9,17 +9,32 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.focusstart9.App
 import com.example.focusstart9.R
-import com.example.focusstart9.data.Constants.PERMISSIONS_REQUEST_READ_CONTACTS
-import com.example.focusstart9.domain.models.Contact
+import com.example.focusstart9.Constants.PERMISSIONS_REQUEST_READ_CONTACTS
+import com.example.focusstart9.domain.data_models.Contact
+import com.example.focusstart9.presentation.adapters.ContactsListAdapter
+import com.example.focusstart9.presentation.base.BaseView
+import com.example.focusstart9.presentation.presenters.ContactsListPresenterImpl
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
-class ContactsListActivity : AppCompatActivity(), ContactsListView {
-    private val presenter = ContactsListPresenterImpl()
+interface ContactsListView : BaseView {
+    fun showContactsList(contactsList: List<Contact>)
+    fun showToast(message: String)
+    fun checkPermission(): Boolean
+}
+
+class ContactsListActivity : AppCompatActivity(),
+    ContactsListView {
+    @Inject
+    lateinit var presenter : ContactsListPresenterImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        App.component.injectsContactsListActivity(this)
         presenter.attachView(this)
         loadContacts.setOnClickListener {
             presenter.onClickLoadButton()

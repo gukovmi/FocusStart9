@@ -1,4 +1,4 @@
-package com.example.focusstart9.domain.models
+package com.example.focusstart9.domain.data_models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

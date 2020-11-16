@@ -1,13 +1,16 @@
-package com.example.focusstart9.data
+package com.example.focusstart9.data.repositories
 
-import com.example.focusstart9.domain.models.Contact
+import com.example.focusstart9.data.data_sources.ContactsAppDataSource
+import com.example.focusstart9.data.data_sources.ContactsDbDataSource
+import com.example.focusstart9.domain.data_models.Contact
 import io.reactivex.Single
+import javax.inject.Inject
 
 interface ContactsRepository {
     fun getContacts(): Single<List<Contact>>
 }
 
-class ContactsRepositoryImpl(
+class ContactsRepositoryImpl @Inject constructor(
     private val contactsAppDataSource: ContactsAppDataSource,
     private val contactsDbDataSource: ContactsDbDataSource
 ) : ContactsRepository {

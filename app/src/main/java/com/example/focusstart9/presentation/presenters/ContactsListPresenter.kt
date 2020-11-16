@@ -1,11 +1,12 @@
-package com.example.focusstart9.list.presentation
+package com.example.focusstart9.presentation.presenters
 
-import com.example.focusstart9.domain.models.Contact
-import com.example.focusstart9.list.di.ContactsListModelFactory
-import com.example.focusstart9.list.domain.ContactsListModel
+import com.example.focusstart9.domain.data_models.Contact
+import com.example.focusstart9.domain.models.ContactsListModel
+import com.example.focusstart9.presentation.views.ContactsListView
 import com.example.focusstart9.presentation.base.BasePresenter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
 interface ContactsListPresenter {
     fun onViewAttached()
@@ -16,14 +17,10 @@ interface ContactsListPresenter {
     fun checkPermission()
 }
 
-class ContactsListPresenterImpl : ContactsListPresenter,
+class ContactsListPresenterImpl @Inject constructor(
+    private val model: ContactsListModel
+) : ContactsListPresenter,
     BasePresenter<ContactsListView>() {
-
-    private lateinit var model: ContactsListModel
-
-    override fun onViewAttached() {
-        model = ContactsListModelFactory().create()
-    }
 
     override fun showContactsList(contactsList: List<Contact>) {
         view?.showContactsList(contactsList)

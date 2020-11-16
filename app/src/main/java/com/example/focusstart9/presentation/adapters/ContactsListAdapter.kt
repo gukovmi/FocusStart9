@@ -1,4 +1,4 @@
-package com.example.focusstart9.list.presentation
+package com.example.focusstart9.presentation.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.focusstart9.R
-import com.example.focusstart9.domain.models.Contact
+import com.example.focusstart9.domain.data_models.Contact
 import kotlinx.android.synthetic.main.item_contact.view.*
 
 class ContactsListAdapter(
