@@ -10,18 +10,18 @@ import dagger.Provides
 @Module
 class DataModule {
     @Provides
-    fun provideContactsAppDataSource() : ContactsAppDataSource =
+    fun provideContactsAppDataSource(): ContactsAppDataSource =
         ContactsAppDataSource()
 
     @Provides
-    fun provideContactsDbDataSource() : ContactsDbDataSource =
+    fun provideContactsDbDataSource(): ContactsDbDataSource =
         ContactsDbDataSource()
 
     @Provides
-    fun provideContactsRepository(contactsAppDataSource: ContactsAppDataSource,
-                                  contactsDbDataSource: ContactsDbDataSource
-    ): ContactsRepository
-            = ContactsRepositoryImpl(
+    fun provideContactsRepository(
+        contactsAppDataSource: ContactsAppDataSource,
+        contactsDbDataSource: ContactsDbDataSource
+    ): ContactsRepository = ContactsRepositoryImpl(
         contactsAppDataSource,
         contactsDbDataSource
     )

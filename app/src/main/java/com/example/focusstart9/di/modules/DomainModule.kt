@@ -10,14 +10,14 @@ import dagger.Provides
 @Module
 class DomainModule {
     @Provides
-    fun provideGetContactsListUseCase(contactsRepository: ContactsRepository): GetContactsListUseCase
-            = GetContactsListUseCase(
-        contactsRepository
-    )
+    fun provideGetContactsListUseCase(contactsRepository: ContactsRepository): GetContactsListUseCase =
+        GetContactsListUseCase(
+            contactsRepository
+        )
 
     @Provides
-    fun provideContactsListModel(getContactsUseCase: GetContactsListUseCase): ContactsListModel
-            = ContactsListModelImpl(
-        getContactsUseCase
-    )
+    fun provideContactsListModel(getContactsUseCase: GetContactsListUseCase): ContactsListModel =
+        ContactsListModelImpl(
+            getContactsUseCase
+        )
 }

@@ -2,8 +2,8 @@ package com.example.focusstart9.presentation.presenters
 
 import com.example.focusstart9.domain.data_models.Contact
 import com.example.focusstart9.domain.models.ContactsListModel
-import com.example.focusstart9.presentation.views.ContactsListView
 import com.example.focusstart9.presentation.base.BasePresenter
+import com.example.focusstart9.presentation.views.ContactsListView
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject

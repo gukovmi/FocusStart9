@@ -13,9 +13,9 @@ class App : Application() {
     companion object {
         lateinit var instance: App
         lateinit var db: AppDatabase
-        fun appContext(): Context = instance.applicationContext
         lateinit var resolver: ContentResolver
         lateinit var component: AppComponent
+        fun appContext(): Context = instance.applicationContext
     }
 
     override fun onCreate() {

@@ -8,8 +8,7 @@ import dagger.Provides
 @Module
 class PresenterModule {
     @Provides
-    fun provideContactsListPresenterImpl(model: ContactsListModel): ContactsListPresenterImpl
-            =
+    fun provideContactsListPresenterImpl(model: ContactsListModel): ContactsListPresenterImpl =
         ContactsListPresenterImpl(
             model
         )

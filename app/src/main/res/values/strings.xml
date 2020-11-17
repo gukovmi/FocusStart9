@@ -5,5 +5,7 @@
     <string name="contact_phone_numbers_text">Phone numbers:\u0020</string>
     <string name="no_contacts_available">No contacts available!</string>
     <string name="on_permission_deny">Permission must be granted in order to display contacts information!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
