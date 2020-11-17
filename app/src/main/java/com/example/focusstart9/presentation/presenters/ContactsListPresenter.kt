@@ -9,7 +9,6 @@ import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 interface ContactsListPresenter {
-    fun onViewAttached()
     fun showContactsList(contactsList: List<Contact>)
     fun makeToast(message: String)
     fun getContactsList()
