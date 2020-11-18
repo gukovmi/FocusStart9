@@ -1,6 +1,6 @@
 package com.example.focusstart9.domain.models
 
-import com.example.focusstart9.domain.data_models.Contact
+import com.example.focusstart9.domain.entity.data_models.Contact
 import com.example.focusstart9.domain.use_cases.GetContactsListUseCase
 import io.reactivex.Single
 import javax.inject.Inject

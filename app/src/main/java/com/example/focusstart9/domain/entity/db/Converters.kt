@@ -1,4 +1,4 @@
-package com.example.focusstart9.domain.db
+package com.example.focusstart9.domain.entity.db
 
 import androidx.room.TypeConverter
 

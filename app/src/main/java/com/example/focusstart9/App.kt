@@ -6,7 +6,7 @@ import android.content.Context
 import androidx.room.Room
 import com.example.focusstart9.di.AppComponent
 import com.example.focusstart9.di.DaggerAppComponent
-import com.example.focusstart9.domain.db.AppDatabase
+import com.example.focusstart9.domain.entity.db.AppDatabase
 
 class App : Application() {
 

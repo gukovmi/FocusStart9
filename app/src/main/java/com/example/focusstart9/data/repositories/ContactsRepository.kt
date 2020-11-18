@@ -2,7 +2,7 @@ package com.example.focusstart9.data.repositories
 
 import com.example.focusstart9.data.data_sources.ContactsAppDataSource
 import com.example.focusstart9.data.data_sources.ContactsDbDataSource
-import com.example.focusstart9.domain.data_models.Contact
+import com.example.focusstart9.domain.entity.data_models.Contact
 import io.reactivex.Single
 import javax.inject.Inject
 

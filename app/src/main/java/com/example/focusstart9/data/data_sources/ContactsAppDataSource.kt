@@ -4,7 +4,7 @@ import android.provider.ContactsContract
 import com.example.focusstart9.App.Companion.appContext
 import com.example.focusstart9.App.Companion.resolver
 import com.example.focusstart9.R
-import com.example.focusstart9.domain.data_models.Contact
+import com.example.focusstart9.domain.entity.data_models.Contact
 import io.reactivex.Single
 import javax.inject.Inject
 

@@ -1,6 +1,6 @@
 package com.example.focusstart9.presentation.presenters
 
-import com.example.focusstart9.domain.data_models.Contact
+import com.example.focusstart9.domain.entity.data_models.Contact
 import com.example.focusstart9.domain.models.ContactsListModel
 import com.example.focusstart9.presentation.base.BasePresenter
 import com.example.focusstart9.presentation.views.ContactsListView
